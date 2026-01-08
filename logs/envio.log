@@ -1,0 +1,73 @@
+2025-12-31 14:17:31,728 | INFO | Envio insertado | idenvio=5 | user_id=1 | ip=127.0.0.1
+2026-01-02 15:47:18,973 | WARNING | Token inválido | error=DecodeError('Not enough segments')
+2026-01-02 15:49:40,734 | INFO | Envio insertado | idenvio=6 | user_id=1 | ip=127.0.0.1
+2026-01-02 17:27:27,742 | WARNING | Token inválido | error=ExpiredSignatureError('Signature has expired')
+2026-01-02 17:27:55,343 | INFO | Consulta envio | idenvio=4 | user_id=1 | ip=192.168.1.15
+2026-01-02 17:29:09,238 | INFO | Envio insertado | idenvio=7 | user_id=1 | ip=192.168.1.15
+2026-01-02 17:29:29,077 | INFO | Envio insertado | idenvio=8 | user_id=1 | ip=192.168.1.15
+2026-01-02 17:29:30,296 | INFO | Envio insertado | idenvio=9 | user_id=1 | ip=192.168.1.15
+2026-01-02 17:29:36,999 | INFO | Consulta envio | idenvio=9 | user_id=1 | ip=192.168.1.15
+2026-01-02 17:31:32,966 | WARNING | Token inválido | error=ExpiredSignatureError('Signature has expired')
+2026-01-02 17:32:05,190 | INFO | Consulta envio | idenvio=7 | user_id=1 | ip=192.168.1.15
+2026-01-02 17:37:34,478 | INFO | Envio insertado | idenvio=10 | user_id=1 | ip=192.168.1.15
+2026-01-02 17:37:35,833 | INFO | Envio insertado | idenvio=11 | user_id=1 | ip=192.168.1.15
+2026-01-06 16:16:45,842 | WARNING | Acceso sin token
+2026-01-06 16:17:27,169 | INFO | Envio insertado | idenvio=12 | user_id=1 | ip=192.168.1.139
+2026-01-07 10:35:20,712 | INFO | Envio insertado | idenvio=13 | user_id=1 | ip=192.168.1.139
+2026-01-07 10:37:23,032 | WARNING | Acceso sin token
+2026-01-07 10:37:53,288 | INFO | Consulta envio | idenvio=12 | user_id=1 | ip=192.168.1.139
+2026-01-07 10:38:08,705 | INFO | Consulta envio | idenvio=13 | user_id=1 | ip=192.168.1.139
+2026-01-07 11:40:55,650 | ERROR | Error insertando envio | user_id=1 | ip=127.0.0.1
+Traceback (most recent call last):
+  File "D:\Desarrollo\Python\FastAPI\mdcs\app\routers\envio_router.py", line 244, in insertar_envio_corto
+    cursor.execute(sql, values)
+pyodbc.ProgrammingError: ('The SQL contains 12 parameter markers, but 13 parameters were supplied', 'HY000')
+2026-01-07 11:41:01,483 | WARNING | Acceso sin token
+2026-01-07 11:41:11,847 | INFO | Consulta envio | idenvio=12 | user_id=1 | ip=127.0.0.1
+2026-01-07 11:41:22,807 | INFO | Consulta envio | idenvio=13 | user_id=1 | ip=127.0.0.1
+2026-01-07 11:41:29,496 | WARNING | Envio no encontrado | idenvio=14 | user_id=1 | ip=127.0.0.1
+2026-01-07 11:41:29,497 | ERROR | Error consultando envio | idenvio=14 | user_id=1 | ip=127.0.0.1
+Traceback (most recent call last):
+  File "D:\Desarrollo\Python\FastAPI\mdcs\app\routers\envio_router.py", line 328, in obtener_envio_corto
+    raise HTTPException(status_code=404, detail="Registro no encontrado")
+fastapi.exceptions.HTTPException
+2026-01-07 11:43:00,422 | ERROR | Error insertando envio | user_id=1 | ip=127.0.0.1
+Traceback (most recent call last):
+  File "D:\Desarrollo\Python\FastAPI\mdcs\app\routers\envio_router.py", line 244, in insertar_envio_corto
+    cursor.execute(sql, values)
+pyodbc.ProgrammingError: ('The SQL contains 12 parameter markers, but 13 parameters were supplied', 'HY000')
+2026-01-07 11:45:28,082 | INFO | Envio insertado | idenvio=14 | user_id=1 | ip=127.0.0.1
+2026-01-07 11:45:36,364 | INFO | Consulta envio | idenvio=14 | user_id=1 | ip=127.0.0.1
+2026-01-07 11:49:50,581 | INFO | Consulta envio | idenvio=14 | user_id=1 | ip=127.0.0.1
+2026-01-07 11:50:17,367 | INFO | Consulta envio | idenvio=15 | user_id=1 | ip=127.0.0.1
+2026-01-07 12:10:24,726 | ERROR | Error consultando envio | idenvio=(1016,) | user_id=1 | ip=127.0.0.1
+Traceback (most recent call last):
+  File "D:\Desarrollo\Python\FastAPI\mdcs\app\routers\envio_router.py", line 326, in obtener_envio_corto
+    cursor.execute(sql, (idenv,))
+pyodbc.Error: ('HY004', '[HY004] [Microsoft][ODBC SQL Server Driver]Tipo de datos SQL no válido (0) (SQLBindParameter)')
+2026-01-07 12:13:25,197 | ERROR | Error consultando envio | idenvio=(1016,) | user_id=1 | ip=127.0.0.1
+Traceback (most recent call last):
+  File "D:\Desarrollo\Python\FastAPI\mdcs\app\routers\envio_router.py", line 326, in obtener_envio_corto
+    cursor.execute(sql, (idenvio,))
+pyodbc.Error: ('HY004', '[HY004] [Microsoft][ODBC SQL Server Driver]Tipo de datos SQL no válido (0) (SQLBindParameter)')
+2026-01-07 12:15:07,048 | ERROR | Error consultando envio | idenvio=(1016,) | user_id=1 | ip=127.0.0.1
+Traceback (most recent call last):
+  File "D:\Desarrollo\Python\FastAPI\mdcs\app\routers\envio_router.py", line 326, in obtener_envio_corto
+    cursor.execute(sql, idenvio)
+pyodbc.Error: ('HY004', '[HY004] [Microsoft][ODBC SQL Server Driver]Tipo de datos SQL no válido (0) (SQLBindParameter)')
+2026-01-07 13:35:49,884 | WARNING | Envio no encontrado | idenvio=(1016,) | user_id=1 | ip=127.0.0.1
+2026-01-07 13:35:49,908 | ERROR | Error consultando envio | idenvio=(1016,) | user_id=1 | ip=127.0.0.1
+Traceback (most recent call last):
+  File "D:\Desarrollo\Python\FastAPI\mdcs\app\routers\envio_router.py", line 333, in obtener_envio_corto
+    )
+fastapi.exceptions.HTTPException
+2026-01-07 13:39:02,728 | ERROR | Error consultando envio | idenvio=XSXw | user_id=1 | ip=127.0.0.1
+Traceback (most recent call last):
+  File "D:\Desarrollo\Python\FastAPI\mdcs\app\routers\envio_router.py", line 303, in obtener_envio_corto
+    idenvio = int(result[0]) - 1000
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'pyodbc.Row'
+2026-01-07 14:05:53,172 | INFO | Consulta envio | idenvio=16 | user_id=1 | ip=127.0.0.1
+2026-01-07 14:12:09,938 | INFO | Consulta envio | idenvio=16 | user_id=1 | ip=127.0.0.1
+2026-01-07 16:01:23,046 | INFO | Envio insertado | idenvio=17 | user_id=1 | ip=127.0.0.1
+2026-01-07 16:30:45,167 | INFO | Consulta envio | idenvio=16 | user_id=1 | ip=127.0.0.1
+2026-01-07 16:31:10,297 | INFO | Consulta envio | idenvio=17 | user_id=1 | ip=127.0.0.1
